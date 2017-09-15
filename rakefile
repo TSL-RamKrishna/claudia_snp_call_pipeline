@@ -45,7 +45,7 @@ namespace :fastqc  do
   end
 end
 
-amespace :trimmomatic do
+namespace :trimmomatic do
   desc "Runs Trimmomatic quality trimming tool"
 
   file "results/#{@sample}/#{@R1_basename}.fastq" => ["#{@read1}"] do
@@ -158,6 +158,8 @@ namespace :Bowtie do
  task :runPE => ["BowtieIndex:run", "results/#{@sample}/#{@sampleid}_paired_aligned.sam", "results/#{@sample}/#{@sampleid}_paired_aligned.bam"] do
    puts "Bowtie mapping completed"
  end
+
+ task :run => [:runPE]
 
  directory "results/#{@sampleid}"
 
