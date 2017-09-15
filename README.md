@@ -14,4 +14,5 @@ This is a rake pipeline to call SNPs. The pipeline does FASTQC on raw fastq data
 ## Usage:
 
 rake -f rakefile R1=/path/to/R1.fastq R2=/path/to/R2.fastq reference=/path/to/refseq.fasta samplename=SampleA sampleid=Sample1
+rake -f rakefile R1=/path/to/R1.fastq R2=/path/to/R2.fastq reference=/path/to/refseq.fasta samplename=SampleA sampleid=Sample1 fastqc:run trimmomatic:run Bowtie:run
 
