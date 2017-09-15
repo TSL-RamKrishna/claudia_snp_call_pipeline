@@ -68,6 +68,8 @@ amespace :trimmomatic do
     puts "Trimmomatic completed"
   end
 
+  task :run => [:runPE]
+
 end
 
 
